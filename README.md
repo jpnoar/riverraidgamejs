@@ -1,2 +1,2 @@
 # River-Raid-Game
-Jogo desenvolvido cpor João Paulo de Abreu Militão 
+Jogo desenvolvido por João Paulo de Abreu Militão para AP2 de Tecnologias WEB
