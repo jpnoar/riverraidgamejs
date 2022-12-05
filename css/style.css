@@ -1,0 +1,157 @@
+* {
+    font-family: 'Montserrat';font-size: 22px;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(8, 41, 8);
+    color: #fff;
+    height: 100%;
+    overflow: hidden;
+}
+
+.content {
+    display: flex;
+    flex-direction: line;
+    align-items: center;
+    min-height: 100%;
+}
+
+[wm-RiverRaid] {
+    margin-left: 13vw;
+    position: relative;
+    height: 109%;
+    width: 72%;
+    overflow: hidden;
+}
+
+[wm-info] {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 1;
+    position: absolute;
+    border: 3px solid #616161;
+    height: 22%;
+    width: 18%;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    border-radius: 0px 25px 25px 0px;
+    border-left: none;
+}
+
+[wm-info] div{
+    font-size: 0.8em;
+}
+
+[wm-info] .barraCombustivel{
+    margin-top: 3vh;
+    height: 3vh;
+}
+
+[wm-info] .fuelCount{
+    margin-left: 0.5vw;
+    font-size: 1em;
+}
+
+.caminhao {
+    position: absolute;
+    width: 6%;
+    top: calc(75% - 30px);
+    height: 15%;
+}
+
+.moeda {
+    width: 100%;
+    animation: pulsar 3s linear infinite;
+}
+
+.combustivel {
+    width: 100%;
+    animation: pulsar 3s linear infinite;
+}
+
+.pontos {
+    color: rgb(26, 26, 26);
+    font-size: 30px;
+    padding: 5%;
+}
+
+.barraCombustivel {
+    --levelFuel: 100;
+    height: 50px;
+    width: 70%;
+    padding: 2px;
+    background-color: #161616;
+    display: flex;
+}
+
+.barraCombustivel::before {
+    content: "";
+    width: calc((var(--levelFuel) * 1%));
+    background-color: hsl(calc(var(--levelFuel) * 1.2), 80%, 50%);
+}
+
+.textoCombustivel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 25px;
+    color: rgb(26, 26, 26);
+    font-weight: bolder;
+    margin-bottom: 1%;
+}
+
+.floresta{
+    background-color: rgb(15, 83, 15);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-bottom: solid 12px rgb(124, 63, 13);
+}
+
+.fundo{
+    z-index: -1;
+    position: absolute;
+    background-image: url(/./img/terra.png);
+    -webkit-animation:mymove 3.8s linear infinite;
+    animation:mymove 3.8s linear infinite;
+    background-size: 100% 50%;
+    background-repeat: repeat;
+    width: 72vw;
+    height: 200%;
+    margin-left: 13vw;
+}
+
+@-webkit-keyframes mymove {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: 0% 100%;
+    }
+}
+@keyframes mymove {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: 0% 100%;
+    }
+}
+
+
+@keyframes pulsar {
+    0% {
+		transform: scale(70%);
+	}
+
+	50% {
+		transform: scale(100%);
+	}
+
+	100% {
+		transform: scale(70%);
+	}
+
+}
